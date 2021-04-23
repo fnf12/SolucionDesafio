@@ -1,18 +1,57 @@
-<<<<<<< HEAD
-## Getting Started
+¡Desafío para desarrolladores!
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Si te interesa participar postulate a la búsqueda, para luego poder enviar la solución del siguiente puzzle.
 
-## Folder Structure
+¿Podrías decirnos cuál es el resultado de ejecutar el siguiente código? (suponiendo que la máquina tiene los recursos suficientes para terminar de ejecutarlo). Por favor no olvides comentarnos cuál fue tu razonamiento para llegar al resultado.
 
-The workspace contains two folders by default, where:
+Puzzle.java
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+import java.math.BigInteger;
 
-## Dependency Management
+class Puzzle {
 
-The `JAVA DEPENDENCIES` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-pack/blob/master/release-notes/v0.9.0.md#work-with-jar-files-directly).
-=======
-# SolucionDesafio
->>>>>>> f4230de4fcf0801a2c5f132737bebb17ae3604f5
+final static BigInteger M = new BigInteger("2021");
+
+private static BigInteger compute(long n) {
+
+String s = "";
+
+for (long i = 0; i < n; i++) {
+
+s = s + n;
+
+}
+
+return new BigInteger(s.toString()).mod(M);
+
+}
+
+public static void main(String args[]) {
+
+for (long n : new long[] { 1L, 2L, 5L, 10L, 20L, 67489454811002199L }) {
+
+System.out.println("" + n + ": " + compute(n));
+
+}
+
+}
+
+}
+
+Resultado parcial por consola
+
+$ javac Puzzle.java
+
+$ java Puzzle
+
+1: 1
+
+2: 22
+
+5: 988
+
+10: 598
+
+20: 963
+
+67489454811002199: ...
