@@ -55,3 +55,5 @@ $ java Puzzle
 20: 963
 
 67489454811002199: ...
+
+Aqui la solucion http://tpcg.io/uky9i63t
